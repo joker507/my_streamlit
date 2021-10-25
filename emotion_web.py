@@ -68,7 +68,7 @@ else:
     st.write(now)
     # 处理结果
     opencv_image = draw_result(opencv_image, result)
-    st.image(cv2.cvtColor(opencv_image, cv2.COLOR_BGR2RGB), use_column_width=true)
+    st.image(cv2.cvtColor(opencv_image, cv2.COLOR_BGR2RGB), use_column_width=True)
     cv2.imwrite(img_dir + now + ".jpg", opencv_image)
 
     # 日志处理：
