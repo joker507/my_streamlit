@@ -11,8 +11,8 @@ def draw_result(frame=None, result=None):
     for i in range(len(result)):
         result_max = max(result[i]["emotions"].items(), key=lambda x: x[1])
         emotion_type, emotion_value = result_max
-        text = emotion_type + ":" + str(emotion_value)
-
+        text = str(i)+emotion_type + ":" + str(emotion_value)
+        
         x, y, w, h = result[i]["box"]
         point_top = np.array([x, y])
         point_bot = np.array([x + w, y + h])
